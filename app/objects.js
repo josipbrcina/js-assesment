@@ -1,18 +1,20 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+if (typeof define !== 'function') {
+  var define = require('amdefine')(module);
+}
 
-define(function() {
+define(function () {
   return {
-    alterContext : function(fn, obj) {
+    alterContext: function (fn, obj) {
       obj.sayIt = fn;
 
       return obj.sayIt();
     },
 
     // TODO: Fix alterObjects
-    alterObjects : function(constructor, greeting) {
+    alterObjects: function (constructor, greeting) {
     },
 
-    iterate : function(obj) {
+    iterate: function (obj) {
       var output = [];
       for (var property in obj) {
         if (obj.hasOwnProperty(property)) {
