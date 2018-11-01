@@ -33,16 +33,19 @@ define(function() {
 
       return output;
     },
-    // TODO: Fix remove without copy
+
     removeWithoutCopy : function(arr, item) {
       var i,
-          output = [];
-      for (i = 0; i < arr.length; i++) {
-        if (arr[i] !== item) {
-          output[output.length] = arr[i];
+          len;
+
+      for (i = 0, len = arr.length; i < len; i++) {
+        if (arr[i] === item) {
+          arr.splice(i, 1);
+          i--;
+          len--;
         }
       }
-      arr = output;
+
       return arr;
     },
 

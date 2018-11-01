@@ -5,13 +5,11 @@ if (typeof define !== 'function') {
 define(function () {
   return {
     alterContext: function (fn, obj) {
-      obj.sayIt = fn;
-
-      return obj.sayIt();
+      return fn.call(obj);
     },
 
-    // TODO: Fix alterObjects
     alterObjects: function (constructor, greeting) {
+      constructor.prototype.greeting = greeting;
     },
 
     iterate: function (obj) {
