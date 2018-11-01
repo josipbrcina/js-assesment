@@ -8,11 +8,11 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     globals : function() {
-      return {};
+      return undefined;
     },
 
     functions : function(flag) {
-      return flag ? 'a' : 'b';
+      return flag === true ? 'a' : 'b';
     },
 
     parseInt : function(num) {
