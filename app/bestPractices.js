@@ -8,29 +8,19 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     globals : function() {
-      myObject = {
-        name : 'Jory'
-      };
-
-      return myObject;
+      return {};
     },
 
     functions : function(flag) {
-      if (flag) {
-        function getValue() { return 'a'; }
-      } else {
-        function getValue() { return 'b'; }
-      }
-
-      return getValue();
+      return flag ? 'a' : 'b';
     },
 
     parseInt : function(num) {
-      return parseInt(num);
+      return parseFloat(num);
     },
 
     identity : function(val1, val2) {
-
+      return val1 === val2;
     }
   };
 });
