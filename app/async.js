@@ -1,5 +1,6 @@
 if (typeof define !== 'function') {
   var define = require('amdefine')(module);
+  var Promise = require('promise');
 }
 
 define(['jquery'], function ($) {

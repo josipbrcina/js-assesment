@@ -18,7 +18,7 @@ define(function () {
     },
 
     parseInt: function (num) {
-      return parseFloat(num);
+      return parseInt(num, 10);
     },
 
     identity: function (val1, val2) {

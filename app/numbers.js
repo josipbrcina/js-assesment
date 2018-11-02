@@ -1,22 +1,24 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+if (typeof define !== 'function') {
+  var define = require('amdefine')(module);
+}
 
-define(function() {
+define(function () {
   return {
-    valueAtBit: function(num, bit) {
-
+    valueAtBit: function (num, bit) {
+      return 1 & (num >> (bit - 1));
     },
 
-    base10: function(str) {
-
+    base10: function (str) {
+      return parseInt(str, 2);
     },
 
-    convertToBinary: function(num) {
-
+    convertToBinary: function (num) {
+      var n = num.toString(2);
+      return '00000000'.substr(n.length) + n;
     },
 
-    multiply: function(a, b) {
-
+    multiply: function (a, b) {
+      return +(a * b).toFixed(8);
     }
   };
 });
-

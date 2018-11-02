@@ -1,8 +1,10 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
+if (typeof define !== 'function') {
+  var define = require('amdefine')(module);
+}
 
-define(function() {
+define(function () {
   return {
-    indexOf : function(arr, item) {
+    indexOf: function (arr, item) {
       for (var i = 0; i < arr.length; i++) {
         if (arr[i] === item) {
           return i;
@@ -12,9 +14,9 @@ define(function() {
       return -1;
     },
 
-    sum : function(arr) {
+    sum: function (arr) {
       var i,
-          sum = 0;
+        sum = 0;
       for (i = 0; i <= arr.length; i++) {
         sum += i;
       }
@@ -22,9 +24,9 @@ define(function() {
       return sum;
     },
 
-    remove : function(arr, item) {
+    remove: function (arr, item) {
       var i,
-          output = [];
+        output = [];
       for (i = 0; i < arr.length; i++) {
         if (arr[i] !== item) {
           output[output.length] = arr[i];
@@ -34,9 +36,9 @@ define(function() {
       return output;
     },
 
-    removeWithoutCopy : function(arr, item) {
+    removeWithoutCopy: function (arr, item) {
       var i,
-          len;
+        len;
 
       for (i = 0, len = arr.length; i < len; i++) {
         if (arr[i] === item) {
@@ -49,15 +51,15 @@ define(function() {
       return arr;
     },
 
-    append : function(arr, item) {
+    append: function (arr, item) {
       arr[arr.length] = item;
 
       return arr;
     },
 
-    truncate : function(arr) {
+    truncate: function (arr) {
       var i,
-          output = [];
+        output = [];
       for (i = 0; i < arr.length; i++) {
         if (i !== arr.length - 1) {
           output[i] = arr[i];
@@ -67,9 +69,9 @@ define(function() {
       return output;
     },
 
-    prepend : function(arr, item) {
+    prepend: function (arr, item) {
       var i,
-          output = [item];
+        output = [item];
       for (i = 0; i < arr.length; i++) {
         output[i + 1] = arr[i + 1];
       }
@@ -77,9 +79,9 @@ define(function() {
       return output;
     },
 
-    curtail : function(arr) {
+    curtail: function (arr) {
       var i,
-          output = [];
+        output = [];
       for (i = 1; i < arr.length; i++) {
         output[i - 1] = arr[i];
       }
@@ -87,9 +89,9 @@ define(function() {
       return output;
     },
 
-    concat : function(arr1, arr2) {
+    concat: function (arr1, arr2) {
       var i,
-          output = arr1;
+        output = arr1;
       for (i = 0; i < arr2.length; i++) {
         output[output.length] = arr2[i];
       }
@@ -97,12 +99,12 @@ define(function() {
       return output;
     },
 
-    insert : function(arr, item, index) {
+    insert: function (arr, item, index) {
       var i,
-          output = [];
+        output = [];
       for (i = 0; i < arr.length; i++) {
         if (i !== index) {
-         output[output.length] = arr[i];
+          output[output.length] = arr[i];
         } else {
           output[output.length] = item;
           output[output.length] = arr[i];
@@ -112,9 +114,9 @@ define(function() {
       return output;
     },
 
-    count : function(arr, item) {
+    count: function (arr, item) {
       var i,
-          counter = 0;
+        counter = 0;
       for (i = 0; i < arr.length; i++) {
         if (arr[i] === item) {
           counter++;
@@ -124,13 +126,13 @@ define(function() {
       return counter;
     },
 
-    duplicates : function(arr) {
+    duplicates: function (arr) {
       var i,
-          output = [],
-          obj = {
-            single: {},
-            duplicates: {}
-          };
+        output = [],
+        obj = {
+          single: {},
+          duplicates: {}
+        };
 
       for (i = 0; i < arr.length; i++) {
         if (obj.single[arr[i]] !== true) {
@@ -147,7 +149,7 @@ define(function() {
       return output;
     },
 
-    square : function(arr) {
+    square: function (arr) {
       var i,
         output = [];
       for (i = 0; i < arr.length; i++) {
@@ -157,9 +159,9 @@ define(function() {
       return output;
     },
 
-    findAllOccurrences : function(arr, target) {
+    findAllOccurrences: function (arr, target) {
       var i,
-          output = [];
+        output = [];
 
       for (i = 0; i < arr.length; i++) {
         if (arr[i] === target) {
